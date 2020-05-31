@@ -1,10 +1,12 @@
 package ru.netology.stats;
+
 public class StatsService {
 
     public int calculateSum(int[] purchases) {
         int sumSales = 0;
         for (int index : purchases) {
-            sumSales += index; }
+            sumSales += index;
+        }
         return sumSales;
     }
 
@@ -18,7 +20,8 @@ public class StatsService {
         int quantityHight = 0;
         for (int i = 0; i < purchases.length; i++) {
             if (averageSum < purchases[i])
-                quantityHight++; }
+                quantityHight++;
+        }
         return quantityHight;
     }
 
@@ -27,7 +30,8 @@ public class StatsService {
         int quantitylow = 0;
         for (int i = 0; i < purchases.length; i++) {
             if (averageSum > purchases[i])
-                quantitylow++; }
+                quantitylow++;
+        }
         return quantitylow;
     }
 
@@ -38,7 +42,8 @@ public class StatsService {
             int monthSale = purchases[i];
             if (minSales >= monthSale) {
                 minSales = monthSale;
-                month = i + 1; }
+                month = i + 1;
+            }
         }
         return month;
     }
@@ -50,7 +55,8 @@ public class StatsService {
             int monthSales = purchases[i];
             if (maxSales <= monthSales) {
                 maxSales = monthSales;
-                month = i + 1; }
+                month = i + 1;
+            }
         }
         return month;
     }
