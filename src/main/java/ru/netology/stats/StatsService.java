@@ -39,21 +39,23 @@ public class StatsService {
         int minSales = purchases[0];
         int month = 0;
         for (int i = 1; i < purchases.length; i++) {
-            if (minSales > purchases[i])
+            if (minSales > purchases[i]) {
                 minSales = purchases[i];
-            month = i + 1;
+                month = i;
+            }
         }
-        return month;
+        return month + 1;
     }
 
     public int calculateMax(int[] purchases) {
         int maxSales = purchases[0];
         int month = 0;
         for (int i = 1; i < purchases.length; i++) {
-            if (maxSales < purchases[i])
+            if (maxSales <= purchases[i]) {
                 maxSales = purchases[i];
-            month = i + 1;
+                month = i;
+            }
         }
-        return month;
+        return month + 1;
     }
 }
